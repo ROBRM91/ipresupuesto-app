@@ -109,3 +109,51 @@ h1, h2 {
 .transactions-section .delete-btn:hover {
     background-color: #c0392b;
 }
+
+.budget-section {
+    background: #f0f8ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.budget-section h2 {
+    text-align: center;
+}
+
+.budget-section form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+#budgets-list .budget-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.budget-progress {
+    width: 100px;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.budget-bar {
+    height: 100%;
+    background: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+.budget-bar.over {
+    background: #e74c3c;
+}

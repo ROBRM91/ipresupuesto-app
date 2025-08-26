@@ -22,12 +22,28 @@
             <form id="transaction-form">
                 <input type="number" id="amount" placeholder="Monto" required>
                 <select id="type" required>
-                    <option value="">-- Seleccionar Tipo --</option>
+                    <option value="">-- Tipo --</option>
                     <option value="ingreso">Ingreso</option>
                     <option value="gasto">Gasto</option>
                 </select>
                 <input type="text" id="description" placeholder="Descripción" required>
+                <select id="category">
+                    <option value="">-- Categoría --</option>
+                    </select>
                 <button type="submit">Añadir</button>
+            </form>
+        </div>
+
+        <div class="budget-section">
+            <h2>Presupuestos Mensuales</h2>
+            <div id="budgets-list">
+                </div>
+            <form id="budget-form">
+                <select id="budget-category" required>
+                    <option value="">-- Seleccionar Categoría --</option>
+                    </select>
+                <input type="number" id="budget-amount" placeholder="Monto Presupuestado" required>
+                <button type="submit">Establecer Presupuesto</button>
             </form>
         </div>
 
