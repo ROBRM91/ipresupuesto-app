@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos e Ingresos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Gastos e Ingresos</h1>
+
+        <div class="summary">
+            <h2>Resumen Financiero</h2>
+            <p>Saldo Actual: <span id="balance">0.00</span></p>
+            <p>Ingresos: <span id="income">0.00</span></p>
+            <p>Gastos: <span id="expenses">0.00</span></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Agregar Transacción</h2>
+            <form id="transaction-form">
+                <input type="number" id="amount" placeholder="Monto" required>
+                <select id="type" required>
+                    <option value="">-- Seleccionar Tipo --</option>
+                    <option value="ingreso">Ingreso</option>
+                    <option value="gasto">Gasto</option>
+                </select>
+                <input type="text" id="description" placeholder="Descripción" required>
+                <button type="submit">Añadir</button>
+            </form>
+        </div>
+
+        <div class="transactions-section">
+            <h2>Historial de Transacciones</h2>
+            <ul id="transactions-list"></ul>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
