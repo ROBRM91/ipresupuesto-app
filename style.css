@@ -1,159 +1,80 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 20px;
-    margin: 0;
+.hidden {
+    display: none;
 }
 
-.container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-}
-
-h1, h2 {
-    color: #4a90e2;
-}
-
-.summary {
-    background: #e9f5ff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.summary p {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-}
-
-.summary #balance {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.summary #income { color: #2ecc71; }
-.summary #expenses { color: #e74c3c; }
-
-.form-section form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.form-section input, .form-section select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    flex: 1;
-    min-width: 120px;
-}
-
-.form-section button {
-    padding: 10px 20px;
-    background: #4a90e2;
-    color: white;
+.card-summary {
+    transition: transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
-.form-section button:hover {
-    background-color: #357abd;
+.card-summary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.transactions-section ul {
-    list-style: none;
-    padding: 0;
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.transactions-section li {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 5px solid;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.positive-balance {
+    color: #198754;
+    font-weight: bold;
+}
+
+.negative-balance {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.priority-high {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-low {
+    border-left: 4px solid #0dcaf0;
+}
+
+.view-container {
+    min-height: 500px;
+}
+
+.cascading-select {
     margin-bottom: 10px;
 }
 
-.transactions-section li.ingreso { border-color: #2ecc71; }
-.transactions-section li.gasto { border-color: #e74c3c; }
-
-.transactions-section .delete-btn {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.transactions-section .delete-btn:hover {
-    background-color: #c0392b;
+.table th {
+    border-top: none;
+    font-weight: 600;
 }
 
-.budget-section {
-    background: #f0f8ff;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.budget-section h2 {
-    text-align: center;
-}
-
-.budget-section form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-    justify-content: center;
-}
-
-#budgets-list .budget-item {
-    background: #fff;
-    padding: 10px;
+.btn {
     border-radius: 5px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.budget-progress {
-    width: 100px;
-    height: 8px;
-    background: #e0e0e0;
-    border-radius: 4px;
-    overflow: hidden;
+.form-control, .form-select {
+    border-radius: 5px;
 }
 
-.budget-bar {
-    height: 100%;
-    background: #2ecc71;
-    transition: width 0.3s ease;
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 600;
 }
 
-.budget-bar.over {
-    background: #e74c3c;
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
 }
